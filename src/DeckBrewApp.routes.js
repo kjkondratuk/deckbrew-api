@@ -22,7 +22,8 @@
                     templateUrl: '/src/layout/sidebar.html'
                 },
                 "body@home": {
-                    templateUrl: '/src/layout/body.html'
+                    templateUrl: '/src/layout/body.html',
+                    controller: 'DeckBrewAppController as deckBrew'
                 },
                 "footer@home": {
                     templateUrl: '/src/layout/footer.html'

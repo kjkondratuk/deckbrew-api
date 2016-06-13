@@ -13,8 +13,8 @@ module.exports = function(grunt) {
         },
         watch: {
             src: {
-                files: ['src/**/*.js', 'src/**/*.less'],
-                tasks: ['uglify', 'less', 'connect']
+                files: ['src/**/*.js', 'src/**/*.less', 'src/**/*.html'],
+                tasks: ['copy', 'uglify', 'less']
             }
         },
         less: {
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
         uglify: {
             all: {
                 files: {
-                    'dist/deckbrewApp.js': ['src/**/*.js']
+                    'dist/deckbrewApp.js': ['src/DeckBrewApp.module.js', 'src/**/*.js']
                 }
             }
         },
