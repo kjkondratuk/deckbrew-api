@@ -28,8 +28,23 @@
                 "footer@home": {
                     templateUrl: '/src/layout/footer.html'
                 }
+            },
+            resolve: {
+                data: ['DeckBrewAppService', getCards]
             }
         });
+        
+        function getCards(deckBrewAppService) {
+            function success(response) {
+                return response.data;
+            }
+
+            function fail(response) {
+                console.log(response);
+            }
+
+            return deckBrewAppService.getCards().then(success, fail);
+        }
 
         $urlRouterProvider.otherwise('/home');
     }

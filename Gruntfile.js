@@ -29,6 +29,9 @@ module.exports = function(grunt) {
         },
         uglify: {
             all: {
+                options: {
+                    sourceMap: true
+                },
                 files: {
                     'dist/deckbrewApp.js': ['src/DeckBrewApp.module.js', 'src/**/*.js']
                 }

@@ -6,8 +6,10 @@
 
     angular.module('DeckBrewApp').controller('DeckBrewAppController', DeckBrewAppController);
 
-    function DeckBrewAppController() {
+    DeckBrewAppController.$inject = [ 'data' ];
+
+    function DeckBrewAppController(data) {
         var vm = this;
-        vm.data = "Hello";
+        vm.data = data;
     }
 })();
