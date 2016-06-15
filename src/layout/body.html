@@ -1,8 +1,10 @@
-<div data-ng-repeat="card in deckBrew.data">
-    <div style="float: left;">
-        <h2>{{ card.name }}</h2>
-        <div data-ng-if="!angular.isEmpty(card.editions[0])">
-            <img data-ng-src="{{ card.editions[0].image_url }}"/>
+<div class="row-fluid">
+    <div data-ng-repeat="card in deckBrew.data" class="db-card">
+        <div>
+            <h2>{{ card.name }}</h2>
+            <div data-ng-if="!angular.isEmpty(card.editions[0])">
+                <img data-ng-src="{{ card.editions[0].image_url }}"/>
+            </div>
         </div>
     </div>
 </div>
