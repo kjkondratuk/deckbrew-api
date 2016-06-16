@@ -1,11 +1,10 @@
-<div class="row-fluid">
-    <div data-ng-repeat="card in deckBrew.data">
-        <div class="clearfix" data-ng-if="$index % 5 == 0"></div> <!-- fix row wrapping -->
-        <div class="col-sm-2 db-card">
-            <h2>{{ card.name }}</h2>
-            <div data-ng-if="!angular.isEmpty(card.editions[0])">
-                <img data-ng-src="{{ card.editions[0].image_url }}"/>
-            </div>
-        </div>
-    </div>
-</div>
+<table class="table">
+    <tbody>
+        <tr data-ng-repeat="line in deckBrew.data">
+            <td data-ng-repeat="card in line">
+                <div>{{ card.name }}</div>
+                <img data-ng-src="{{ card.editions[card.editions.length - 1].image_url }}"/>
+            </td>
+        </tr>
+    </tbody>
+</table>

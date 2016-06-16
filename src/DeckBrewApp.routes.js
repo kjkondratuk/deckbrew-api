@@ -30,20 +30,20 @@
                 }
             },
             resolve: {
-                data: ['DeckBrewAppService', getCards]
+                data: ['DeckBrewResolver', getCards]
             }
         });
         
-        function getCards(deckBrewAppService) {
-            function success(response) {
-                return response.data;
+        function getCards(deckBrewResolver) {
+            function success(data) {
+                return data;
             }
 
-            function fail(response) {
-                console.log(response);
+            function fail(data) {
+                console.log(data);
             }
 
-            return deckBrewAppService.getCards().then(success, fail);
+            return deckBrewResolver.getCards().then(success, fail);
         }
 
         $urlRouterProvider.otherwise('/home');
