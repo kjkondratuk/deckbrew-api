@@ -1,10 +1,13 @@
-<table class="table">
-    <tbody>
-        <tr data-ng-repeat="line in deckBrew.data">
-            <td data-ng-repeat="card in line">
-                <div>{{ card.name }}</div>
-                <img data-ng-src="{{ card.editions[card.editions.length - 1].image_url }}"/>
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div class="body-content">
+    <table class="table">
+        <tbody>
+            <tr data-ng-repeat="line in deckBrew.data">
+                <td data-ng-repeat="card in line">
+                    <!--<a data-ui-sref="">-->
+                        <img data-ng-src="{{ card.editions[card.editions.length - 1].image_url }}" alt="{{ card.name }}"/>
+                    <!--</a>-->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

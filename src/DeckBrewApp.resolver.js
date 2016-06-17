@@ -17,11 +17,11 @@
                     pushIfPresent(line, response.data[i + 2]);
                     pushIfPresent(line, response.data[i + 3]);
                     pushIfPresent(line, response.data[i + 4]);
-                    console.log(line);
+                    // console.log(line);
                     pageData.push(line);
                 }
 
-                console.log(pageData);
+                // console.log(pageData);
                 return pageData;
             }
 
