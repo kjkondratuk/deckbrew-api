@@ -14,7 +14,7 @@
         }
 
         function getCards() {
-            return $http.get('https://api.deckbrew.com/mtg/cards');
+            return $http.get('https://api.deckbrew.com/mtg/cards?page=5');
         }
     }
 })();
